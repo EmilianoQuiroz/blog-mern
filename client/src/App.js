@@ -16,6 +16,9 @@ function App() {
             <Post />
           </main>
         }/>
+        <Route path={'/login'} element={
+          <div>login</div>
+        } />
     </Routes>
 
   );

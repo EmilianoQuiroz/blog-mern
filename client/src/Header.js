@@ -7,8 +7,8 @@ export default function Header() {
         IA-Blog
       </a>
       <nav>
-        <Link href="/login">Login</Link>
-        <a href="">Register</a>
+        <Link to='/login'>Login</Link>
+        <Link to="/register">Register</Link>
       </nav>
     </header>
   );
