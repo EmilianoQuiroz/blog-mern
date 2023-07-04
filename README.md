@@ -1,2 +1,3 @@
 # blog-mern
-Blog de tecnologia hecho con MongoDB, Express, React y Node
+
+Fullstack Blog App using MERN (mongo, express, react, node)
