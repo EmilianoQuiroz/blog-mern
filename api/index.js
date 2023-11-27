@@ -5,12 +5,14 @@ const User = require('./models/User');
 const bcrypt = require('bcryptjs');
 const app = express();
 const jwt = require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'jkjasdknkjnasdndoainkllsoijlanfkns';
 
-app.use(cors({credentials:true,origin:'http://localhost:3000'}));
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
+app.use(cookieParser());
 
 mongoose.connect('mongodb+srv://santiagoquirozdev:dNGo2RfuoYRP2Np4@cluster0.v0dd31q.mongodb.net/?retryWrites=true&w=majority');
 
@@ -41,6 +43,15 @@ app.post('/login', async (req, res) => {
     } else {
         res.status(400).json('Mail o contraseña incorrectos');
     }
+});
+
+app.get('/profile', (req, res) => {
+    const { token } = req.cookies;
+    jwt.verify(token, secret, {}, (err, info) => {
+        if(err) throw err;
+        res.json(info);
+    });
+    res.json(req.cookies);
 });
 
 app.listen(4000);
