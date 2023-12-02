@@ -42,4 +42,4 @@ const PostPage = () => {
     );
 }
 
-export default PostPage
+export default PostPage;
