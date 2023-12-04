@@ -17,6 +17,10 @@ code {
     monospace;
 }
 
+a {
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
 }
@@ -27,12 +31,11 @@ main {
   margin: 0 auto;
 }
 
-/* HEADER Styles*/
 header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
   margin-top: 20px;
+  margin-bottom: 50px;
   align-items: center;
 }
 
@@ -48,10 +51,9 @@ header a.logo {
 
 header nav {
   display: flex;
-  gap: 15px;
+  gap: 24px;
 }
 
-/*POST Styles*/
 div.post {
   display: grid;
   grid-template-columns: 1fr;
@@ -59,8 +61,7 @@ div.post {
   margin-bottom: 30px;
 }
 
-/*MOBILE POSTS Styles*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   div.post {
     grid-template-columns: .9fr 1.1fr;
   }
@@ -68,7 +69,7 @@ div.post {
 
 div.post div.texts h2 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 div.post div.texts a {
@@ -77,9 +78,9 @@ div.post div.texts a {
 }
 
 div.post p.info {
-  margin: 6px 0;
+  margin: 24px 0;
   color: #888;
-  font-size: .7rem;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   gap: 10px;
@@ -89,12 +90,11 @@ div.post p.info a.author {
   color: #333;
 }
 
-div.post p.sumary {
+div.post p.summary {
   margin: 10px 0;
-  line-height: 1.4rem;
+  line-height: 1.8rem;
 }
 
-/* LOGIN and REGISTER Styles*/
 form.login,
 form.register {
   max-width: 400px;
@@ -112,6 +112,7 @@ input {
 }
 
 button {
+  cursor: pointer;
   width: 100%;
   display: block;
   background-color: #555;
@@ -127,7 +128,7 @@ form.register h1 {
 }
 
 div.post-page div.image {
-  max-height: 200px;
+  max-height: 300px;
   display: flex;
   overflow: hidden;
 }
@@ -151,19 +152,25 @@ div.post-page h1 {
 div.post-page time {
   text-align: center;
   display: block;
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: #aaa;
+  margin: 10px 0;
 }
 
 div.post-page div.author {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 0.7rem;
+  font-size: .7rem;
   font-weight: bold;
 }
 
-div.post-page div.content p {
-  line-height: 1.6rem;
+div.content p {
+  line-height: 1.7rem;
+  margin: 30px 0;
+}
+
+div.content li {
+  margin-bottom: 10px;
 }
 
 div.edit-row {
