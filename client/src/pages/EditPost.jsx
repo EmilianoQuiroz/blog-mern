@@ -48,11 +48,11 @@ const EditPost = () => {
     return (
         <form onSubmit={updatePost}>
             <input type="title"
-                placeholder={'Title'}
+                placeholder={'Titulo'}
                 value={title}
                 onChange={ev => setTitle(ev.target.value)} />
             <input type="summary"
-                placeholder={'Summary'}
+                placeholder={'Intro'}
                 value={summary}
                 onChange={ev => setSummary(ev.target.value)} />
             <input type="file"
@@ -63,4 +63,4 @@ const EditPost = () => {
     );
 }
 
-export default EditPost
+export default EditPost;
